@@ -3,4 +3,11 @@
     <string name="ingresar">INGRESAR</string>
     <string name="registrarse">registrarse</string>
     <string name="generar_ticket">GENERAR TICKET</string>
+    <string name="patente">PATENTE</string>
+    <string name="tiempo_de_estadia">TIEMPO DE ESTADIA</string>
+    <string name="monto_bruto">MONTO BRUTO</string>
+    <string name="recargo_por_vehiculo">RECARGO POR VEHICULO</string>
+    <string name="descuento_por_cliente">DESCUENTO POR CLIENTE</string>
+    <string name="monto_final">MONTO FINAL</string>
+    <string name="ticket_nro">ticket nro</string>
 </resources>

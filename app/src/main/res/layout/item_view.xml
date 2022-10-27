@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#03A9F4">
+
+    <TextView
+
+        android:id="@+id/titulo_patente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/patente"
+        android:textColor="#F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/patente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="@+id/titulo_patente"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#F44336"/>
+
+    <TextView
+        android:id="@+id/titulo_tiempoEstadia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tiempo_de_estadia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_patente"
+        android:textColor="#F44336"/>
+
+    <TextView
+        android:id="@+id/titulo_monto_bruto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/monto_bruto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_tiempoEstadia"
+        android:textColor="#F44336"/>
+
+    <TextView
+        android:id="@+id/titulo_recargo_por_vehiculo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/recargo_por_vehiculo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_monto_bruto"
+        android:textColor="#F44336"/>
+
+    <TextView
+        android:id="@+id/titulo_descuento_por_cliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/descuento_por_cliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_recargo_por_vehiculo"
+        android:textColor="#F44336"/>
+
+    <TextView
+        android:id="@+id/titulo_monto_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/monto_final"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_descuento_por_cliente"
+        android:textColor="#F44336"/>
+
+    <TextView
+        android:id="@+id/tiempo_estadia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toEndOf="@+id/titulo_tiempoEstadia"
+        app:layout_constraintTop_toBottomOf="@+id/patente"
+        android:textColor="#F44336"/>
+
+    <TextView
+        android:id="@+id/monto_bruto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toEndOf="@+id/titulo_monto_bruto"
+        app:layout_constraintTop_toBottomOf="@+id/tiempo_estadia"
+        android:textColor="#F44336"/>
+
+    <TextView
+        android:id="@+id/recargo_vehiculo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toEndOf="@+id/titulo_recargo_por_vehiculo"
+        app:layout_constraintTop_toBottomOf="@+id/monto_bruto"
+        android:textColor="#F44336"/>
+
+    <TextView
+        android:id="@+id/descuento_cliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toEndOf="@+id/titulo_descuento_por_cliente"
+        app:layout_constraintTop_toBottomOf="@+id/recargo_vehiculo"
+        android:textColor="#F44336"/>
+
+    <TextView
+        android:id="@+id/monto_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toEndOf="@+id/titulo_monto_final"
+        app:layout_constraintTop_toBottomOf="@+id/descuento_cliente"
+        android:textColor="#F44336"/>
+
+    <TextView
+        android:id="@+id/numero_ticket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/titulo_numero_ticket"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#F44336"/>
+
+    <TextView
+        android:id="@+id/titulo_numero_ticket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/ticket_nro"
+        app:layout_constraintStart_toEndOf="@+id/patente"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#F44336"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
