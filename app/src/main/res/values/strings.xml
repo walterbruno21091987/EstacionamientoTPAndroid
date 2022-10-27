@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">EstacionamientoTP</string>
+    <string name="ingresar">INGRESAR</string>
+    <string name="registrarse">registrarse</string>
+    <string name="generar_ticket">GENERAR TICKET</string>
 </resources>
