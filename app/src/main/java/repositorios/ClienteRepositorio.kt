@@ -64,6 +64,18 @@ object ClienteRepositorio {
             }
         }
 
+
+        return client ?: throw NoExisteIdDeClienteException("no existe el ID")
+    }
+    fun obtenerPorPatente(patente: String): Cliente {
+        var client: Cliente? = null
+        for (cliente in clientes) {
+            if (cliente.vehiculo.patenteVehiculo.equals(patente)) {
+                client = cliente
+            }
+        }
+
+
         return client ?: throw NoExisteIdDeClienteException("no existe el ID")
     }
 
