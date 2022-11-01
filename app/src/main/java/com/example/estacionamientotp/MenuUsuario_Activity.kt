@@ -20,9 +20,13 @@ class MenuUsuario_Activity : AppCompatActivity() {
         if(idUser!=null){
         val user=ClienteRepositorio.obtenerPorId(idUser)
         }
+        binding.generarTicket.setOnClickListener {
+
+        }
         binding.cerrarSesion.setOnClickListener {
             intent=Intent(this,MainActivity::class.java)
             startActivity(intent)
         }
+
     }
 }

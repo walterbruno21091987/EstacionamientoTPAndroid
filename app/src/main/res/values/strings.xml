@@ -17,4 +17,5 @@
     <string name="abonar_ticket">ABONAR TICKET</string>
     <string name="historial_tickets">HISTORIAL TICKETS</string>
     <string name="ingrese_saldo">ingrese saldo</string>
+    <string name="numero_ticket_ingreso">NUMERO TICKET</string>
 </resources>
