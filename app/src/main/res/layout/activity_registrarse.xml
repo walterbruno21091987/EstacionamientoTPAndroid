@@ -37,6 +37,7 @@
             app:layout_constraintVertical_bias="0.079">
 
             <com.google.android.material.textfield.TextInputEditText
+               android:id="@+id/et_usuario_registrarse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/usuario" />
@@ -54,6 +55,7 @@
             app:layout_constraintVertical_bias="0.079">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_nombre_registrarse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/nombre_registrarse" />
@@ -71,6 +73,7 @@
             app:layout_constraintVertical_bias="0.079">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_apellidoRegistrarse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/apellido" />
@@ -88,6 +91,7 @@
             app:layout_constraintVertical_bias="0.079">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_contraseña_registrarse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/contrase_a" />
@@ -106,6 +110,7 @@
             app:layout_constraintVertical_bias="0.079">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_patente_registrarse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/patente" />

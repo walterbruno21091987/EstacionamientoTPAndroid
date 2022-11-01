@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
          val user = UsuarioRepositorio.iniciar(binding.username.text.toString(),binding.password.text.toString())
          if (user != null) {
              intent= Intent(this,MenuUsuario_Activity::class.java)
+             intent.putExtra("usuario",user.id)
              startActivity(intent)
          } else {
              Toast.makeText(this,"El usuario ingresado no existe o la password es incorrecta",Toast.LENGTH_LONG).show()
