@@ -1,9 +1,13 @@
 package repositorios
 
+import android.content.Context
 import clases.VehiculoPesado
 import android.os.Build
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import clases.Usuario
+import com.example.estacionamientotp.R
+import com.example.estacionamientotp.Registrarse_Activity
 
 import excepciones.ExisteUsuarioException
 import validarEspacios
@@ -30,7 +34,7 @@ object UsuarioRepositorio {
         )
     }
 
-    fun agregar(usuario: Usuario): Long {
+    fun agregar(usuario: Usuario, context:Context?=null): Long {
         return try {
             val userToSave = Usuario(
                 usuarios.count().toLong().plus(1),
@@ -51,8 +55,9 @@ object UsuarioRepositorio {
             usuarios.add(userToSave)
             userToSave.id
         } catch (ex: Exception) {
-
-            println(("Usuario - " + ex.message))
+            if(context!=null) {
+                Toast.makeText(context, "Usuario - " + ex.message, Toast.LENGTH_LONG).show()
+            }
             0
         }
     }
