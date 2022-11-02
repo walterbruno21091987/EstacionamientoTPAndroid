@@ -116,41 +116,53 @@
                 android:hint="@string/patente" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <RadioButton
-            android:id="@+id/automovil"
+        <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Automovil"
-            android:textColor="#EEFF41"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/vehiculo_pesado"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/patente_registrarse" />
-
-        <RadioButton
-            android:id="@+id/vehiculo_pesado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Vehiculo pesado"
-            android:textColor="#EEFF41"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/registrar_usuario"
             app:layout_constraintEnd_toEndOf="parent"
-
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/patente_registrarse" />
+            app:layout_constraintTop_toBottomOf="@+id/patente_registrarse"
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/motocicleta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" Moto"
-            android:textColor="#EEFF41"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.521"
-            app:layout_constraintStart_toEndOf="@+id/vehiculo_pesado"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.853" />
+            <RadioButton
+                android:id="@+id/automovil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Automovil"
+                android:textColor="#EEFF41"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/vehiculo_pesado"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patente_registrarse" />
+
+            <RadioButton
+                android:id="@+id/vehiculo_pesado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehiculo pesado"
+                android:textColor="#EEFF41"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patente_registrarse" />
+
+            <RadioButton
+                android:id="@+id/motocicleta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Moto"
+                android:textColor="#EEFF41"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.521"
+                app:layout_constraintStart_toEndOf="@+id/vehiculo_pesado"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.853" />
+        </RadioGroup>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/registrar_usuario"
@@ -160,7 +172,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/vehiculo_pesado"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
             app:srcCompat="@android:drawable/ic_input_add"
             tools:ignore="SpeakableTextPresentCheck" />
 

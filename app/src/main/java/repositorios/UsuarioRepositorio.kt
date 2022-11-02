@@ -51,6 +51,7 @@ object UsuarioRepositorio {
             usuarios.add(userToSave)
             userToSave.id
         } catch (ex: Exception) {
+
             println(("Usuario - " + ex.message))
             0
         }
