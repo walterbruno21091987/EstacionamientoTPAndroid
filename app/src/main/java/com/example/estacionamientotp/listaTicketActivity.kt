@@ -4,6 +4,7 @@ import adapter.MyAdapterTickets
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,8 +22,11 @@ class listaTicketActivity : AppCompatActivity() {
         val recyclerView=findViewById<RecyclerView>(R.id.recyclerTickets)
         recyclerView.layoutManager=LinearLayoutManager(this)
         val listTicket= mutableListOf<Ticket>()
-        val licensePlate=""
-        for (i in TicketRepositorio.buscar(licensePlate)) listTicket.add(i)
+        val bundle=intent.extras
+        val licensePlate=bundle?.getString("patente")
+        if(licensePlate!=null){
+       for (i in TicketRepositorio.buscar(licensePlate)) listTicket.add(i)
         recyclerView.adapter=MyAdapterTickets(listTicket)
+    }
     }
 }

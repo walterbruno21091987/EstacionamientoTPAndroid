@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/generar_ticket"
+        android:id="@+id/bt_generar_ticket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
@@ -36,8 +36,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/generar_ticket"
-      app:layout_constraintBottom_toTopOf="@id/pago_ticket"
+      app:layout_constraintTop_toBottomOf="@id/bt_generar_ticket"
+      app:layout_constraintBottom_toTopOf="@id/bt_pago_ticket"
         android:visibility="gone"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
@@ -46,7 +46,7 @@
         android:hint="@string/numero_ticket_ingreso"
         android:textColorHint="@color/rojoapp"/>
     <Button
-        android:id="@+id/pago_ticket"
+        android:id="@+id/bt_pago_ticket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -63,7 +63,7 @@
         android:text="@string/historial_tickets"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pago_ticket"  />
+        app:layout_constraintTop_toBottomOf="@+id/bt_pago_ticket"  />
     <Button
         android:id="@+id/bt_saldo"
         android:layout_width="wrap_content"

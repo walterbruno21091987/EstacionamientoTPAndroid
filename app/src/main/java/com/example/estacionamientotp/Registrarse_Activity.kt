@@ -1,6 +1,7 @@
 package com.example.estacionamientotp
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -43,6 +44,8 @@ class Registrarse_Activity : AppCompatActivity() {
                 if (userId > 0) clientId = ClienteRepositorio.agregar(Cliente(0, nombre, apellido, 0.0, LocalDate.now(), vehiculo))
                 if (userId > 0 && clientId > 0) {
                     Toast.makeText(this,"Usuario creado correctamente",Toast.LENGTH_LONG).show()
+                  intent= Intent(this,MainActivity::class.java)
+                    startActivity(intent)
                 } else if (userId > 0) {
                     UsuarioRepositorio.eliminar(userId)}
         }}

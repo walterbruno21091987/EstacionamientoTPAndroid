@@ -94,9 +94,11 @@
                 android:id="@+id/et_contraseña_registrarse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/contrase_a" />
+                android:hint="@string/contrase_a"
+                android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/patente_registrarse"
             android:layout_width="243dp"

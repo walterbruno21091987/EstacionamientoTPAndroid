@@ -29,12 +29,10 @@ object TicketRepositorio {
 
     fun agregar(ticket: Ticket):Boolean  {
     var agregado=false
-     try {
+
          if (tickets.none { it.codigo == ticket.codigo })  agregado=tickets.add(ticket)
          else throw CodigoDeTicketExistenteException("Codigo existente")
-     }catch( e:CodigoDeTicketExistenteException){
-         println(e.message)
-        }
+
         return agregado
     }
 
