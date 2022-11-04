@@ -54,6 +54,7 @@ class MenuUsuario_Activity : AppCompatActivity() {
 
 
         }
+
         binding.btConsultarHistorial.setOnClickListener {
 
             intent=Intent(this,listaTicketActivity::class.java)
@@ -65,6 +66,7 @@ class MenuUsuario_Activity : AppCompatActivity() {
             startActivity(intent)
 
         }
+
         binding.cerrarSesion.setOnClickListener {
             intent=Intent(this,MainActivity::class.java)
             startActivity(intent)

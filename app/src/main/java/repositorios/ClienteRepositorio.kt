@@ -47,9 +47,7 @@ object ClienteRepositorio {
         }
     }
 
-    fun eliminar(cliente: Cliente) {
-        clientes.remove(cliente)
-    }
+
 
     @RequiresApi(Build.VERSION_CODES.N)
     fun eliminar(id: Long) {
@@ -79,9 +77,7 @@ object ClienteRepositorio {
         return client ?: throw NoExisteIdDeClienteException("no existe el ID")
     }
 
-//    private fun obtenerPorId(id: Long): Cliente {
-//        return clientes.single { it.id == id }
-//    }
+
 
     fun buscar(apellido: String, nombre: String): List<Cliente> {
         return clientes.filter { it.apellido == apellido && it.nombre == nombre }

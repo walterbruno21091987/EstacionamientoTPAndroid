@@ -18,4 +18,5 @@
     <string name="historial_tickets">HISTORIAL TICKETS</string>
     <string name="ingrese_saldo">ingrese saldo</string>
     <string name="numero_ticket_ingreso">NUMERO TICKET</string>
+    <string name="estado">ESTADO</string>
 </resources>

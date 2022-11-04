@@ -14,8 +14,8 @@ class Ticket(
     val vehiculoPatente: String,
     var estadia: Int = 0,
     var montoBruto: Double = 0.0,
-    var montoFinal: Double = 0.0
-
+    var montoFinal: Double = 0.0,
+    var pago:Boolean=false
 ) {
     @RequiresApi(Build.VERSION_CODES.O)
     fun calcularEstadia(): Int {

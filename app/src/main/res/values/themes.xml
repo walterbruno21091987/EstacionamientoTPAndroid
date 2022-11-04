@@ -13,4 +13,12 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+<style name="ET_style" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <item name="colorControlNormal">#F44336</item>
+    <item name="colorControlActivated">#03A9F4</item>
+    <item name="android:textColorHighlight">#F44336</item>
+    <item name="android:textColor">#F44336</item>
+    <item name="android:textColorHint">#F44336</item>
+
+</style>
 </resources>

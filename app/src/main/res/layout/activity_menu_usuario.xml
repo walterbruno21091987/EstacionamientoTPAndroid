@@ -31,6 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <EditText
+        style="@style/ET_style"
         android:id="@+id/et_generar_ticket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,10 +42,8 @@
         android:visibility="gone"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:textColor="@color/rojoapp"
-
         android:hint="@string/numero_ticket_ingreso"
-        android:textColorHint="@color/rojoapp"/>
+        />
     <Button
         android:id="@+id/bt_pago_ticket"
         android:layout_width="wrap_content"
@@ -75,6 +74,7 @@
         app:layout_constraintTop_toBottomOf="@+id/bt_consultar_historial"  />
 
 <TextView
+    style="@style/ET_style"
     android:id="@+id/tv_informar_saldo"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/bt_saldo"
-    android:textColor="@color/rojoapp"
+
 android:visibility="gone"
     />
     <Button
@@ -95,6 +95,7 @@ android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_informar_saldo"  />
     <EditText
+        style="@style/ET_style"
         android:id="@+id/et_monto_a_recargar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -102,7 +103,6 @@ android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_cargar_saldo"
         android:visibility="gone"
-        android:textColor="@color/rojoapp"
         android:hint="@string/ingrese_saldo"/>
 
     <ImageView
