@@ -24,6 +24,7 @@ class MenuUsuario_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_usuario)
         val binding:ActivityMenuUsuarioBinding=DataBindingUtil.setContentView(this,R.layout.activity_menu_usuario)
+
         val bundle=intent.extras
         val idUser=bundle?.getLong("usuario")
        var user: Cliente?=null
@@ -66,6 +67,7 @@ class MenuUsuario_Activity : AppCompatActivity() {
             startActivity(intent)
 
         }
+
 
         binding.cerrarSesion.setOnClickListener {
             intent=Intent(this,MainActivity::class.java)

@@ -9,6 +9,10 @@ class Abonar_Ticket_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding:ActivityAbonarTicketBinding=DataBindingUtil.setContentView(this,R.layout.activity_abonar_ticket)
+ binding.btPagar.setOnClickListener {
+
+
+ }
 
     }
 }

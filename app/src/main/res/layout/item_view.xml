@@ -34,7 +34,7 @@
             android:layout_marginTop="4dp"
             android:textColor="@color/rojoapp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.213"
+            app:layout_constraintHorizontal_bias="0.239"
             app:layout_constraintStart_toStartOf="@+id/titulo_patente"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -166,7 +166,7 @@
             android:layout_marginTop="4dp"
             android:textColor="@color/rojoapp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintHorizontal_bias="0.218"
             app:layout_constraintStart_toEndOf="@+id/titulo_numero_ticket"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -174,7 +174,7 @@
             android:id="@+id/titulo_numero_ticket"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="152dp"
+            android:layout_marginStart="136dp"
             android:layout_marginTop="4dp"
             android:text="@string/ticket_nro"
             android:textColor="@color/rojoapp"

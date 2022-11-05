@@ -1,5 +1,6 @@
 package adapter
 
+import android.annotation.SuppressLint
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,6 +10,7 @@ import clases.Ticket
 import com.example.estacionamientotp.R
 
 class MyAdapterTickets(val ticketList:List<Ticket>):RecyclerView.Adapter<TicketViewHolder>() {
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TicketViewHolder {
      val layoutInflater=LayoutInflater.from(parent.context)
         return TicketViewHolder(layoutInflater.inflate(R.layout.item_view,parent,false))

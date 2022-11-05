@@ -171,33 +171,38 @@
         app:layout_constraintTop_toBottomOf="@+id/titulo_descuento_por_cliente"
         app:layout_constraintVertical_bias="0.0"/>
 
-    <TextView
-        android:id="@+id/estado"
+    <EditText
+        style="@style/ET_style"
+        android:id="@+id/et_generar_ticket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="132dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndtOf="@+id/tv_titulo_estado"
-        app:layout_constraintTop_toBottomOf="@+id/descuento_cliente"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_generar_ticket"
+        app:layout_constraintBottom_toTopOf="@id/bt_pago_ticket"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/numero_ticket_ingreso"
+        tools:ignore="NotSibling" />
+
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="95dp"
         android:layout_height="94dp"
-        android:layout_marginTop="600dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:clickable="true"
+        app:layout_constraintVertical_bias="0.956"
         app:srcCompat="@drawable/vecteezy_money_video_play_logo_template_design_modern_logo_video_for_13222403"
-        android:focusable="true" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/PAGAR"
+        android:id="@+id/bt_pagar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PAGAR"

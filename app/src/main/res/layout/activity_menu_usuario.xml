@@ -44,6 +44,21 @@
         android:layout_marginBottom="10dp"
         android:hint="@string/numero_ticket_ingreso"
         />
+    <EditText
+        style="@style/ET_style"
+        android:id="@+id/et_ingrese_ticket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_pago_ticket"
+        app:layout_constraintBottom_toTopOf="@id/bt_consultar_historial"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/numero_ticket_ingreso"
+        />
+
     <Button
         android:id="@+id/bt_pago_ticket"
         android:layout_width="wrap_content"
@@ -68,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/abonar_ticket"
+        android:text="@string/saldo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_consultar_historial"  />
@@ -90,7 +105,7 @@ android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="CARGAR SALDO"
+        android:text="@string/cargar_saldo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_informar_saldo"  />
