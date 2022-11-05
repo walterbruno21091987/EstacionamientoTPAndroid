@@ -67,7 +67,17 @@ class MenuUsuario_Activity : AppCompatActivity() {
             startActivity(intent)
 
         }
+   binding.btPagoTicket.setOnClickListener {
+       if(binding.etIngreseTicket.visibility == View.GONE){
+           binding.etIngreseTicket.visibility=View.VISIBLE
+       }else binding.etIngreseTicket.visibility=View.GONE
+       if(!binding.etIngreseTicket.text.isEmpty()){
+       intent=Intent(this,Abonar_Ticket_Activity::class.java)
+           val codTicket=binding.etIngreseTicket.text.toString()
+           intent.putExtra("codigoTicket",codTicket)
+           startActivity(intent)}
 
+   }
 
         binding.cerrarSesion.setOnClickListener {
             intent=Intent(this,MainActivity::class.java)
