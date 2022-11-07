@@ -1,6 +1,7 @@
 package com.example.estacionamientotp
 
 import android.content.Intent
+import android.opengl.Visibility
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -80,10 +81,27 @@ class MenuUsuario_Activity : AppCompatActivity() {
 
    }
 
+        binding.btCargarSaldo.setOnClickListener {
+         if(binding.groupRecargarSaldo.visibility==View.GONE){
+             binding.groupRecargarSaldo.visibility=View.VISIBLE
+         }else{
+             binding.groupRecargarSaldo.visibility=View.GONE
+         }
+            binding.fbEnviarRegargaSaldo.setOnClickListener {
+                if(!binding.etMontoARecargar.text.isEmpty()&&idUser!=null){
+                    Toast.makeText(this,"Su nuevo saldo es de $ ${ClienteRepositorio.aumentarSaldo(idUser,binding.etMontoARecargar.text.toString())}",Toast.LENGTH_LONG).show()
+                }
+
+
+
+
+            }
+        }
         binding.cerrarSesion.setOnClickListener {
             intent=Intent(this,MainActivity::class.java)
             startActivity(intent)
         }
+
 
     }
 }
