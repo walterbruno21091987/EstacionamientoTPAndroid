@@ -58,4 +58,11 @@ class Ticket(
         |       
     """.trimMargin()
     }
+    fun obtenerEstadoDeTicket():String{
+        var estado="IMPAGO"
+        if(pago==true){
+            estado="PAGO"
+        }
+        return estado
+    }
 }

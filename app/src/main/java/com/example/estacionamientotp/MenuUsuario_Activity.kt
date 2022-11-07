@@ -73,8 +73,9 @@ class MenuUsuario_Activity : AppCompatActivity() {
        }else binding.etIngreseTicket.visibility=View.GONE
        if(!binding.etIngreseTicket.text.isEmpty()){
        intent=Intent(this,Abonar_Ticket_Activity::class.java)
-           val codTicket=binding.etIngreseTicket.text.toString()
+           val codTicket=binding.etIngreseTicket.text.toString().toInt()
            intent.putExtra("codigoTicket",codTicket)
+           intent.putExtra("idUser",idUser)
            startActivity(intent)}
 
    }

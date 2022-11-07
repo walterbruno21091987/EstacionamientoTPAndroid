@@ -171,6 +171,19 @@
         app:layout_constraintTop_toBottomOf="@+id/titulo_descuento_por_cliente"
         app:layout_constraintVertical_bias="0.0"/>
 
+    <TextView
+        android:id="@+id/tv_estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        app:layout_constraintBottom_toBottomOf="@id/monto_final"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toEndOf="@+id/tv_titulo_estado"
+
+        app:layout_constraintTop_toBottomOf="@+id/descuento_cliente"
+        app:layout_constraintVertical_bias="0.0" />
+
     <EditText
         style="@style/ET_style"
         android:id="@+id/et_generar_ticket"
@@ -188,7 +201,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/im_pagar"
         android:layout_width="95dp"
         android:layout_height="94dp"
         android:clickable="true"
@@ -205,10 +218,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PAGAR"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/im_pagar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/im_pagar"
         app:layout_constraintVertical_bias="1.0" />
 
 
