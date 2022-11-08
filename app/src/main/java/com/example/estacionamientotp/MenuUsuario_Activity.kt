@@ -97,6 +97,17 @@ class MenuUsuario_Activity : AppCompatActivity() {
 
             }
         }
+        binding.btSaldo.setOnClickListener {
+            if(binding.tvInformarSaldo.visibility==View.GONE){
+                binding.tvInformarSaldo.visibility=View.VISIBLE
+                if(idUser!=null) {
+                    binding.tvInformarSaldo.text = ClienteRepositorio.consultarSaldo(idUser).toString()
+                }
+                           }
+            else{
+                binding.tvInformarSaldo.visibility=View.GONE
+            }
+        }
         binding.cerrarSesion.setOnClickListener {
             intent=Intent(this,MainActivity::class.java)
             startActivity(intent)

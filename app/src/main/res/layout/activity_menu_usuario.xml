@@ -89,18 +89,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_consultar_historial"  />
 
-<TextView
-    style="@style/ET_style"
-    android:id="@+id/tv_informar_saldo"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="30dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/bt_saldo"
+    <TextView
+        android:id="@+id/tv_informar_saldo"
+        style="@style/ET_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#536DFE"
+        android:textColor="#FF6E40"
+        android:textSize="20sp"
 
-android:visibility="gone"
-    />
+
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_saldo" />
 
     <Button
         android:id="@+id/bt_cargar_saldo"
