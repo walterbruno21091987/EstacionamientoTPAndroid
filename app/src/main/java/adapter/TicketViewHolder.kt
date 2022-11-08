@@ -18,6 +18,7 @@ class TicketViewHolder(view: View):ViewHolder(view) {
     val tiempoEstadia=view.findViewById<TextView>(R.id.tiempo_estadia)
     val recargoVehiculo=view.findViewById<TextView>(R.id.recargo_vehiculo)
     val descuentoCiente=view.findViewById<TextView>(R.id.descuento_cliente)
+    val estado=view.findViewById<TextView>(R.id.estado)
     @RequiresApi(Build.VERSION_CODES.O)
     fun render(ticket: Ticket) {
         val user=ClienteRepositorio.obtenerPorPatente(ticket.vehiculoPatente)
@@ -28,5 +29,6 @@ class TicketViewHolder(view: View):ViewHolder(view) {
         montoFinal.text=ticket.calcularMontoFinal(user).toString()
       recargoVehiculo.text=ticket.calcularMontoConRecargo(user).toString()
         descuentoCiente.text=ticket.calcularDescuentoCliente(user).toString()
+        estado.text=ticket.obtenerEstadoDeTicket()
     }
 }

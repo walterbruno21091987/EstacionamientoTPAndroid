@@ -181,6 +181,19 @@
             app:layout_constraintStart_toEndOf="@+id/patente"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/estado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/rojoapp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.463"
+            app:layout_constraintStart_toEndOf="@+id/recargo_vehiculo"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_numero_ticket"
+            app:layout_constraintVertical_bias="0.547" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
 </layout>
