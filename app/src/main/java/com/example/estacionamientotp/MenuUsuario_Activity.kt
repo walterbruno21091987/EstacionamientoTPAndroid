@@ -89,8 +89,12 @@ class MenuUsuario_Activity : AppCompatActivity() {
          }
             binding.fbEnviarRegargaSaldo.setOnClickListener {
                 if(!binding.etMontoARecargar.text.isEmpty()&&idUser!=null){
-                    Toast.makeText(this,"Su nuevo saldo es de $ ${ClienteRepositorio.aumentarSaldo(idUser,binding.etMontoARecargar.text.toString())}",Toast.LENGTH_LONG).show()
-                }
+                    try {    Toast.makeText(this,"Su nuevo saldo es de $ ${ClienteRepositorio.aumentarSaldo(idUser,binding.etMontoARecargar.text.toString())}",Toast.LENGTH_LONG).show()
+                }catch (ex: Throwable) {
+                Toast.makeText(this,"Error " + ex.message,Toast.LENGTH_LONG).show()
+            }
+
+            }
 
 
 

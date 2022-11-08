@@ -79,16 +79,11 @@ object ClienteRepositorio {
 
 
 
-    fun buscar(apellido: String, nombre: String): List<Cliente> {
-        return clientes.filter { it.apellido == apellido && it.nombre == nombre }
-    }
+
 
     fun aumentarSaldo(id: Long, funds: String): Double {
-        try {
+
             obtenerPorId(id).saldo += funds.esPositivo()
-        } catch (ex: Throwable) {
-            println("Error " + ex.message)
-        }
         return obtenerPorId(id).saldo
     }
 
