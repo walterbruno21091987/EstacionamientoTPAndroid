@@ -33,24 +33,22 @@ class MenuUsuario_Activity : AppCompatActivity() {
      user=ClienteRepositorio.obtenerPorId(idUser)
         }
         binding.btGenerarTicket.setOnClickListener {
+            var existente=false
+            if(user!=null){
+                 var numTicket=(Math.random().times(1000000).plus(1)).toInt()
 
 
-            if(binding.etGenerarTicket.visibility == View.GONE){
-                binding.etGenerarTicket.visibility=View.VISIBLE
-            }else binding.etGenerarTicket.visibility=View.GONE
-
-            if(!binding.etGenerarTicket.text.isEmpty()&&user!=null){
-                 val numTicket=binding.etGenerarTicket.text.toString().toInt()
                   val nuevoTicket = Ticket(
 
                       numTicket, LocalDate.now(), LocalTime.now(), user.vehiculo.patenteVehiculo
                   )
-                 try{ val agregado = TicketRepositorio.agregar(nuevoTicket)
+             do{    try{ val agregado = TicketRepositorio.agregar(nuevoTicket)
                   if (agregado) {
-                      Toast.makeText(this,"Se registro correctamente el ticket",Toast.LENGTH_LONG).show()
+                      Toast.makeText(this,"Se registro correctamente el ticket numero $numTicket",Toast.LENGTH_LONG).show()
                   }}catch( e: CodigoDeTicketExistenteException){
-                     Toast.makeText(this,e.message,Toast.LENGTH_LONG).show()
-                 }
+                      existente=true
+                     numTicket=(Math.random().times(1000000).plus(1)).toInt()
+                  }}while(existente)
 
             }
 
