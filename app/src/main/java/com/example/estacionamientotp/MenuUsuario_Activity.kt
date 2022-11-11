@@ -67,16 +67,20 @@ class MenuUsuario_Activity : AppCompatActivity() {
             startActivity(intent)
 
         }
+
    binding.btPagoTicket.setOnClickListener {
-       if(binding.etIngreseTicket.visibility == View.GONE){
-           binding.etIngreseTicket.visibility=View.VISIBLE
-       }else binding.etIngreseTicket.visibility=View.GONE
-       if(!binding.etIngreseTicket.text.isEmpty()){
-       intent=Intent(this,Abonar_Ticket_Activity::class.java)
-           val codTicket=binding.etIngreseTicket.text.toString().toInt()
-           intent.putExtra("codigoTicket",codTicket)
-           intent.putExtra("idUser",idUser)
-           startActivity(intent)}
+       if(binding.groupPagarTicket.visibility == View.GONE){
+           binding.groupPagarTicket.visibility=View.VISIBLE
+       }else binding.groupPagarTicket.visibility=View.GONE
+      binding.btEnviarNumeroTicketAPagar.setOnClickListener {
+           if (!binding.etIngreseTicket.text.isEmpty()) {
+               intent = Intent(this, Abonar_Ticket_Activity::class.java)
+               val codTicket = binding.etIngreseTicket.text.toString().toInt()
+               intent.putExtra("codigoTicket", codTicket)
+               intent.putExtra("idUser", idUser)
+               startActivity(intent)
+
+       }}
 
    }
 
@@ -86,7 +90,7 @@ class MenuUsuario_Activity : AppCompatActivity() {
          }else{
              binding.groupRecargarSaldo.visibility=View.GONE
          }
-            binding.fbEnviarRegargaSaldo.setOnClickListener {
+            binding.btEnviarRegargaSaldo.setOnClickListener {
                 if(!binding.etMontoARecargar.text.isEmpty()&&idUser!=null){
                     try {    Toast.makeText(this,"Su nuevo saldo es de $ ${ClienteRepositorio.aumentarSaldo(idUser,binding.etMontoARecargar.text.toString())}",Toast.LENGTH_LONG).show()
                 }catch (ex: Throwable) {

@@ -11,16 +11,16 @@
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"
+        android:contentDescription="TODO"
 
+        android:scaleType="centerCrop"
         android:src="@drawable/hd_wallpaper_nissan_auto_moto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        android:contentDescription="TODO" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/bt_generar_ticket"
@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bt_pago_ticket"
         app:layout_constraintBottom_toTopOf="@id/bt_consultar_historial"
-        android:visibility="gone"
+
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:hint="@string/numero_ticket_ingreso"
@@ -86,8 +86,6 @@
         android:background="#536DFE"
         android:textColor="#FF6E40"
         android:textSize="20sp"
-
-
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,14 +106,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="et_monto_a_recargar,fb_enviar_regarga_saldo" />
+        app:constraint_referenced_ids="et_monto_a_recargar,bt_enviar_regarga_saldo" />
 
 
     <EditText
         android:id="@+id/et_monto_a_recargar"
         style="@style/ET_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="95dp"
+        android:layout_height="41dp"
         android:layout_marginTop="24dp"
         android:background="@color/white"
         android:backgroundTint="#E5E7ED"
@@ -126,7 +124,7 @@
         android:textColorHighlight="#334DAC"
         android:textColorHint="#344CC5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_cargar_saldo" />
 
@@ -144,19 +142,36 @@
         app:srcCompat="@drawable/logout_37127"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fb_enviar_regarga_saldo"
-        android:layout_width="58dp"
-        android:layout_height="58dp"
+    <Button
+        android:id="@+id/bt_enviar_regarga_saldo"
+        android:layout_width="52dp"
+        android:layout_height="43dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
-        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/et_monto_a_recargar"
         app:layout_constraintTop_toBottomOf="@+id/bt_cargar_saldo"
-        app:srcCompat="@android:drawable/ic_input_add"
-        tools:ignore="SpeakableTextPresentCheck" />
+
+        android:text=">"/>
+
+    <Button
+        android:id="@+id/bt_enviar_numero_ticket_a_pagar"
+        android:layout_width="54dp"
+        android:layout_height="42dp"
+        android:text=">"
+        app:layout_constraintBottom_toTopOf="@id/bt_consultar_historial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintStart_toEndOf="@+id/et_ingrese_ticket"
+        app:layout_constraintTop_toBottomOf="@+id/bt_pago_ticket"
+        app:layout_constraintVertical_bias="0.256" />
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_pagar_ticket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="et_ingrese_ticket,bt_enviar_numero_ticket_a_pagar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
