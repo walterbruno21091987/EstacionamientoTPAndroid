@@ -26,27 +26,34 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/usuario_registarse"
-            android:layout_width="243dp"
-            android:layout_height="56dp"
+            android:layout_width="241dp"
+            android:layout_height="73dp"
             app:boxBackgroundColor="#AE27E8BB"
+            app:counterEnabled="true"
+            app:counterMaxLength="16"
+            app:counterTextColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/datsun"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.079">
 
             <com.google.android.material.textfield.TextInputEditText
-               android:id="@+id/et_usuario_registrarse"
+                android:id="@+id/et_usuario_registrarse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/usuario" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nombre_registrarse"
-            android:layout_width="243dp"
-            android:layout_height="56dp"
+            android:layout_width="242dp"
+            android:layout_height="76dp"
             app:boxBackgroundColor="#AE27E8BB"
+            app:counterEnabled="true"
+            app:counterMaxLength="25"
+            app:counterTextColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -60,11 +67,15 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/nombre_registrarse" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/apellido_registrarse"
-            android:layout_width="243dp"
-            android:layout_height="56dp"
+            android:layout_width="241dp"
+            android:layout_height="77dp"
             app:boxBackgroundColor="#AE27E8BB"
+            app:counterEnabled="true"
+            app:counterMaxLength="25"
+            app:counterTextColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -73,17 +84,22 @@
             app:layout_constraintVertical_bias="0.079">
 
             <com.google.android.material.textfield.TextInputEditText
-                style="@style/ET_style"
                 android:id="@+id/et_apellidoRegistrarse"
+                style="@style/ET_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/apellido" />
+                android:hint="@string/apellido"
+                android:textColor="#0C0C0C" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/contrasenia_registrarse"
-            android:layout_width="243dp"
-            android:layout_height="56dp"
+            android:layout_width="239dp"
+            android:layout_height="79dp"
             app:boxBackgroundColor="#AE27E8BB"
+            app:counterEnabled="true"
+            app:counterMaxLength="16"
+            app:counterTextColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
