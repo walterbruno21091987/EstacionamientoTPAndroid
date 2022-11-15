@@ -21,6 +21,9 @@ class Ticket(
     fun calcularEstadia(): Int {
         estadia = ChronoUnit.DAYS.between(fechaIngreso, LocalDate.now())
             .toInt().times(24).plus((LocalTime.now().hour.minus(horaIngreso.hour)))
+        if(estadia>=0&&estadia<1){
+            estadia=1
+        }
         return estadia
     }
 

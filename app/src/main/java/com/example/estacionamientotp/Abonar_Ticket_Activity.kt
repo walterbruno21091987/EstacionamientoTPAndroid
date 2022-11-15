@@ -22,16 +22,16 @@ class Abonar_Ticket_Activity : AppCompatActivity() {
         val numeroTicket=bundle?.getInt("codigoTicket")
         val idUser=bundle?.getLong("idUser")
         if(numeroTicket!=null&&idUser!=null) {
-            val cliente=ClienteRepositorio.obtenerPorId(idUser)
-                val ticketPrint= TicketRepositorio.obtenerPorId(numeroTicket)
-         binding.numeroTicket.text=ticketPrint.codigo.toString()
-         binding.montoFinal.text=ticketPrint.calcularMontoFinal(cliente).toString()
-         binding.descuentoCliente.text=ticketPrint.calcularDescuentoCliente(cliente).toString()
-         binding.montoBruto.text=ticketPrint.calcularMontoBruto().toString()
-         binding.patente.text=ticketPrint.vehiculoPatente.toString()
-         binding.recargoVehiculo.text=ticketPrint.calcularMontoConRecargo(cliente).toString()
-         binding.tiempoEstadia.text=ticketPrint.calcularEstadia().toString()
-         binding.tvEstado.text=ticketPrint.obtenerEstadoDeTicket()
+            val cliente = ClienteRepositorio.obtenerPorId(idUser)
+            val ticketPrint = TicketRepositorio.obtenerPorId(numeroTicket)
+            binding.patente.text = ticketPrint.vehiculoPatente.toString()
+            binding.numeroTicket.text = ticketPrint.codigo.toString()
+            binding.tiempoEstadia.text = ticketPrint.calcularEstadia().toString()
+            binding.montoBruto.text = ticketPrint.calcularMontoBruto().toString()
+            binding.recargoVehiculo.text = cliente.vehiculo.calcularRecargo(ticketPrint).toString()
+            binding.tvEstado.text = ticketPrint.obtenerEstadoDeTicket()
+            binding.descuentoCliente.text = ticketPrint.calcularDescuentoCliente(cliente).toString()
+            binding.montoFinal.text=ticketPrint.calcularMontoFinal(cliente).toString()
         }
 
 
@@ -39,12 +39,11 @@ class Abonar_Ticket_Activity : AppCompatActivity() {
             try { if(numeroTicket!=null&&idUser!=null){
          val ticket = TicketRepositorio.obtenerPorId(numeroTicket)
                 if (ClienteRepositorio.consultarSaldo(idUser) >= ticket.montoFinal&&ticket.pago==false) {
-             Toast.makeText(this,"Se ha abonado el ticket correctamente",Toast.LENGTH_LONG).show()
-             Toast.makeText(this,"Su nuevo saldo es de $ ${ClienteRepositorio.reducirSaldo(idUser,ticket.montoFinal)}",Toast.LENGTH_LONG).show()
-               ticket.pago=true
-                }
-         } else throw SaldoInsuficienteException("Saldo insuficiente")
-     } catch (e: Throwable) {
+             Toast.makeText(this,"Se ha abonado el ticket correctamente,su nuevo saldo es de ${ClienteRepositorio.reducirSaldo(idUser, ticket.montoFinal)}",Toast.LENGTH_LONG).show()
+                    ticket.pago=true
+                } else throw SaldoInsuficienteException("Saldo insuficiente")
+         }
+     } catch (e: SaldoInsuficienteException) {
         Toast.makeText(this,e.message,Toast.LENGTH_LONG).show()
      }
 

@@ -26,9 +26,9 @@ class TicketViewHolder(view: View):ViewHolder(view) {
         patente.text=ticket.vehiculoPatente
         montoBruto.text=ticket.calcularMontoBruto().toString()
         tiempoEstadia.text=ticket.calcularEstadia().toString()
-        montoFinal.text=ticket.calcularMontoFinal(user).toString()
-      recargoVehiculo.text=ticket.calcularMontoConRecargo(user).toString()
+        recargoVehiculo.text=user.vehiculo.calcularRecargo(ticket).toString()
         descuentoCiente.text=ticket.calcularDescuentoCliente(user).toString()
         estado.text=ticket.obtenerEstadoDeTicket()
+        montoFinal.text=ticket.calcularMontoFinal(user).toString()
     }
 }
