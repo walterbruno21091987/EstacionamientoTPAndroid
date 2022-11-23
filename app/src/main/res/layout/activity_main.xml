@@ -13,7 +13,6 @@
         android:scaleType="centerCrop"
         android:src="@drawable/auto"
 
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -35,8 +34,8 @@
 
     <EditText
         android:id="@+id/username"
-        android:layout_width="237dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:hint="USUARIO"
         android:inputType="text"
         android:minHeight="48dp"
@@ -47,18 +46,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintVertical_bias="0.101" />
+        app:layout_constraintVertical_bias="0.103" />
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="237dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:hint="CONTRASEÑA"
         android:inputType="text|textPassword"
         android:minHeight="48dp"
         android:singleLine="true"
-        android:textColor="#F44336"
-        android:textColorHint="#F44336"
+        android:textColor="#EC0E0E"
+        android:textColorHint="#D53013"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -68,8 +67,8 @@
 
     <Button
         android:id="@+id/ingresar"
-        android:layout_width="237dp"
-        android:layout_height="57dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/ingresar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,8 +78,8 @@
 
     <Button
         android:id="@+id/registrarse"
-        android:layout_width="237dp"
-        android:layout_height="57dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/registrarse"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

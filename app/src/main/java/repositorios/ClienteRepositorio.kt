@@ -42,7 +42,7 @@ object ClienteRepositorio {
             clientes.add(clientToSave)
             clientToSave.id
         } catch (ex: Throwable) {
-            println(("Cliente - " + ex.message))
+
             0
         }
     }

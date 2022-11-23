@@ -21,4 +21,6 @@
     <string name="estado">ESTADO</string>
     <string name="cargar_saldo">CARGAR SALDO</string>
     <string name="saldo"> VER SALDO</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
 </resources>

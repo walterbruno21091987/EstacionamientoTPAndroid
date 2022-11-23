@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
              Toast.makeText(this,"El usuario ingresado no existe o la password es incorrecta",Toast.LENGTH_LONG).show()
          }
      }
+
         binding.registrarse.setOnClickListener {
             intent=Intent(this,Registrarse_Activity::class.java)
            startActivity(intent)

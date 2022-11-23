@@ -49,12 +49,12 @@ object UsuarioRepositorio {
 
             if (existe(usuario.nombreUsuario)) {
                 throw ExisteUsuarioException("El usuario ya existe")
-            } else if (userToSave.vehiculo.patenteVehiculo.validarLargo(1, 10).isEmpty()) {
-                throw Exception("La patente es invalida")
+            } else if (userToSave.vehiculo.patenteVehiculo.validarLargo(1, 10).isEmpty()||!usuarios.none { it.vehiculo.patenteVehiculo.equals(userToSave.vehiculo.patenteVehiculo)}){
+                throw Throwable("La patente es invalida o existente")
             }
             usuarios.add(userToSave)
             userToSave.id
-        } catch (ex: Exception) {
+        } catch (ex: Throwable) {
             if(context!=null) {
                 Toast.makeText(context, "Usuario - " + ex.message, Toast.LENGTH_LONG).show()
             }
