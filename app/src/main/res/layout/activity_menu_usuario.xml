@@ -20,38 +20,38 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/bt_generar_ticket"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="237dp"
+        android:layout_height="57dp"
         android:layout_marginTop="52dp"
         android:text="@string/generar_ticket"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        style="@style/ET_style"
-        android:id="@+id/et_ingrese_ticket"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bt_pago_ticket"
-        app:layout_constraintBottom_toTopOf="@id/bt_consultar_historial"
 
+    <EditText
+        android:id="@+id/et_ingrese_ticket"
+        style="@style/ET_style"
+        android:layout_width="157dp"
+        android:layout_height="57dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:hint="@string/numero_ticket_ingreso"
-        />
+        app:layout_constraintBottom_toTopOf="@id/bt_consultar_historial"
 
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_pago_ticket" />
 
     <Button
         android:id="@+id/bt_pago_ticket"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="237dp"
+        android:layout_height="57dp"
         android:layout_marginTop="30dp"
         android:text="@string/abonar_ticket"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,41 +60,43 @@
 
     <Button
         android:id="@+id/bt_consultar_historial"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_width="237dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="24dp"
         android:text="@string/historial_tickets"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_ingrese_ticket"  />
+        app:layout_constraintTop_toBottomOf="@+id/et_ingrese_ticket" />
+
     <Button
         android:id="@+id/bt_saldo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="237dp"
+        android:layout_height="57dp"
         android:layout_marginTop="30dp"
         android:text="@string/saldo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_consultar_historial"  />
+        app:layout_constraintTop_toBottomOf="@+id/bt_consultar_historial" />
 
     <TextView
         android:id="@+id/tv_informar_saldo"
         style="@style/ET_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="#536DFE"
-        android:textColor="#FF6E40"
+        android:layout_width="157dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:background="#7B8DF1"
+        android:textColor="#FAFAFA"
         android:textSize="20sp"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_saldo" />
 
     <Button
         android:id="@+id/bt_cargar_saldo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="237dp"
+        android:layout_height="57dp"
         android:layout_marginTop="30dp"
         android:text="@string/cargar_saldo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,19 +114,19 @@
     <EditText
         android:id="@+id/et_monto_a_recargar"
         style="@style/ET_style"
-        android:layout_width="95dp"
-        android:layout_height="41dp"
+        android:layout_width="157dp"
+        android:layout_height="35dp"
         android:layout_marginTop="24dp"
-        android:background="@color/white"
-        android:backgroundTint="#E5E7ED"
-
+        android:background="#7B8DF1"
+        android:backgroundTint="#7B8DF1"
+        android:textColorLink="@color/white"
         android:hint="@string/ingrese_saldo"
         android:minHeight="48dp"
-        android:textColor="#1371DF"
-        android:textColorHighlight="#334DAC"
-        android:textColorHint="#344CC5"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintHorizontal_bias="0.347"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_cargar_saldo" />
 

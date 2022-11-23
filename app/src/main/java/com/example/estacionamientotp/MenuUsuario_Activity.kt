@@ -61,7 +61,7 @@ class MenuUsuario_Activity : AppCompatActivity() {
         if (binding.tvInformarSaldo.visibility == View.GONE) {
             binding.tvInformarSaldo.visibility = View.VISIBLE
             if (idUser != null) {
-                binding.tvInformarSaldo.text = ClienteRepositorio.consultarSaldo(idUser).toString()
+                binding.tvInformarSaldo.text = ClienteRepositorio.consultarSaldo(idUser).toString()+" "+"$"
             }
         } else {
             binding.tvInformarSaldo.visibility = View.GONE

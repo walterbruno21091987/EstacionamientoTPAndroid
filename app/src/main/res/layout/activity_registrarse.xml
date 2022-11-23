@@ -26,9 +26,10 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/usuario_registarse"
-            android:layout_width="241dp"
-            android:layout_height="73dp"
-            app:boxBackgroundColor="#AE27E8BB"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="6dp"
+            app:boxBackgroundColor="#AEB0F3E4"
             app:counterEnabled="true"
             app:counterMaxLength="16"
             app:counterTextColor="@color/white"
@@ -48,18 +49,19 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nombre_registrarse"
-            android:layout_width="242dp"
-            android:layout_height="76dp"
-            app:boxBackgroundColor="#AE27E8BB"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="6dp"
+            app:boxBackgroundColor="#AEB0F3E4"
             app:counterEnabled="true"
             app:counterMaxLength="25"
             app:counterTextColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/usuario_registarse"
-            app:layout_constraintVertical_bias="0.079">
+            app:layout_constraintVertical_bias="0.054">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_nombre_registrarse"
@@ -70,18 +72,18 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/apellido_registrarse"
-            android:layout_width="241dp"
-            android:layout_height="77dp"
-            app:boxBackgroundColor="#AE27E8BB"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="6dp"
+            app:boxBackgroundColor="#AEB0F3E4"
             app:counterEnabled="true"
             app:counterMaxLength="25"
             app:counterTextColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nombre_registrarse"
-            app:layout_constraintVertical_bias="0.079">
+            app:layout_constraintVertical_bias="0.076">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_apellidoRegistrarse"
@@ -94,9 +96,10 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/contrasenia_registrarse"
-            android:layout_width="239dp"
-            android:layout_height="79dp"
-            app:boxBackgroundColor="#AE27E8BB"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="8dp"
+            app:boxBackgroundColor="#AEB0F3E4"
             app:counterEnabled="true"
             app:counterMaxLength="16"
             app:counterTextColor="@color/white"
@@ -118,21 +121,26 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/patente_registrarse"
-            android:layout_width="243dp"
-            android:layout_height="56dp"
-            app:boxBackgroundColor="#AE27E8BB"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="8dp"
+            app:boxBackgroundColor="#AEB0F3E4"
+            app:counterEnabled="true"
+            app:counterMaxLength="6"
+            app:counterTextColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/contrasenia_registrarse"
-            app:layout_constraintVertical_bias="0.079">
+            app:layout_constraintVertical_bias="0.108">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_patente_registrarse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/patente" />
+                android:hint="@string/patente"
+                android:visibility="visible" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <RadioGroup
@@ -146,54 +154,61 @@
             app:layout_constraintTop_toBottomOf="@+id/patente_registrarse"
             android:orientation="horizontal">
 
-            <RadioButton
-                android:id="@+id/automovil"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Automovil"
-                android:textColor="#EEFF41"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/vehiculo_pesado"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/patente_registrarse" />
-
-            <RadioButton
-                android:id="@+id/vehiculo_pesado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Vehiculo pesado"
-                android:textColor="#EEFF41"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/patente_registrarse" />
-
-            <RadioButton
-                android:id="@+id/motocicleta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" Moto"
-                android:textColor="#EEFF41"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.521"
-                app:layout_constraintStart_toEndOf="@+id/vehiculo_pesado"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.853" />
         </RadioGroup>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/registrar_usuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
             android:clickable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioGroup"
             app:srcCompat="@android:drawable/ic_input_add"
             tools:ignore="SpeakableTextPresentCheck" />
+
+        <RadioButton
+            android:id="@+id/automovil"
+            android:layout_width="105dp"
+            android:layout_height="47dp"
+            android:text="Automovil"
+            android:textColor="#EEFF41"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patente_registrarse"
+            app:layout_constraintVertical_bias="0.157" />
+
+        <RadioButton
+            android:id="@+id/vehiculo_pesado"
+            android:layout_width="145dp"
+            android:layout_height="47dp"
+            android:text="Vehiculo pesado"
+            android:textColor="#EEFF41"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patente_registrarse"
+            app:layout_constraintVertical_bias="0.157" />
+
+        <RadioButton
+            android:id="@+id/motocicleta"
+            android:layout_width="100dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:text=" Moto"
+            android:textColor="#EEFF41"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patente_registrarse"
+            app:layout_constraintVertical_bias="0.127" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
