@@ -49,7 +49,7 @@ object UsuarioRepositorio {
 
             if (existe(usuario.nombreUsuario)) {
                 throw ExisteUsuarioException("El usuario ya existe")
-            } else if (userToSave.vehiculo.patenteVehiculo.validarLargo(1, 10).isEmpty()||!usuarios.none { it.vehiculo.patenteVehiculo.equals(userToSave.vehiculo.patenteVehiculo)}){
+            } else if (userToSave.vehiculo.patenteVehiculo.validarLargo(1, 10).isEmpty()){
                 throw Throwable("La patente es invalida o existente")
             }
             usuarios.add(userToSave)

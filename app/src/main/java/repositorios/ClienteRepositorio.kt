@@ -42,7 +42,6 @@ object ClienteRepositorio {
             clientes.add(clientToSave)
             clientToSave.id
         } catch (ex: Throwable) {
-
             0
         }
     }

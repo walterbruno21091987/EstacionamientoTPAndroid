@@ -39,6 +39,7 @@ class Registrarse_Activity : AppCompatActivity() {
             }
             var clientId: Long = 0
             if(vehiculo!=null){
+
             val userId: Long = UsuarioRepositorio.agregar(Usuario(0, nombre, apellido, 0.0, LocalDate.now(),
                         vehiculo, contrasenia, username),this)
                 if (userId > 0) clientId = ClienteRepositorio.agregar(Cliente(0, nombre, apellido, 0.0, LocalDate.now(), vehiculo))

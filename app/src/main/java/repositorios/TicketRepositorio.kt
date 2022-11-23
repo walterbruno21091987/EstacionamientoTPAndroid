@@ -1,5 +1,6 @@
 package repositorios
 
+import android.annotation.SuppressLint
 import android.os.Build
 import androidx.annotation.RequiresApi
 import clases.Ticket
@@ -13,7 +14,7 @@ object TicketRepositorio {
     private val tickets = mutableListOf<Ticket>()
 
     init {
-        //repeat(10){ i ->
+
         for (i in 1..10) agregar(
             Ticket(
                 codigo = i,
@@ -27,6 +28,7 @@ object TicketRepositorio {
         )
     }
 
+    @SuppressLint("SuspiciousIndentation")
     fun agregar(ticket: Ticket):Boolean  {
     var agregado=false
 
