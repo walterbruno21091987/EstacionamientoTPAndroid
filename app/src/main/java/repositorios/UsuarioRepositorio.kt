@@ -78,8 +78,7 @@ object UsuarioRepositorio {
     private fun existe(nombreUsuario: String, password: String): Boolean {
         return usuarios.any { it.nombreUsuario == nombreUsuario && it.password == password }
     }
-
-    fun iniciar(nombreUsuario: String, password: String): Usuario? {
+   fun iniciar(nombreUsuario: String, password: String): Usuario? {
         return if (existe(nombreUsuario, password)) usuarios.first { it.nombreUsuario == nombreUsuario }
         else null
     }

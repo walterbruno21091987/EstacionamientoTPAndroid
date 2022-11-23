@@ -53,4 +53,5 @@ class Registrarse_Activity : AppCompatActivity() {
 
         }
 
-    }
+
+}
