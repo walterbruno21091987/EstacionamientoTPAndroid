@@ -1,4 +1,4 @@
-package com.example.estacionamientotp
+package com.example.estacionamientotp.ui
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import clases.*
+import com.example.estacionamientotp.R
 import com.example.estacionamientotp.databinding.ActivityRegistrarseBinding
 import repositorios.ClienteRepositorio
 import repositorios.UsuarioRepositorio
@@ -19,7 +20,9 @@ class Registrarse_Activity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding:ActivityRegistrarseBinding=DataBindingUtil.setContentView(this,R.layout.activity_registrarse)
+        val binding:ActivityRegistrarseBinding=DataBindingUtil.setContentView(this,
+            R.layout.activity_registrarse
+        )
 
         binding.registrarUsuario.setOnClickListener {
             val nombre=binding.etNombreRegistrarse.text.toString()
@@ -45,7 +48,7 @@ class Registrarse_Activity : AppCompatActivity() {
                 if (userId > 0) clientId = ClienteRepositorio.agregar(Cliente(0, nombre, apellido, 0.0, LocalDate.now(), vehiculo))
                 if (userId > 0 && clientId > 0) {
                     Toast.makeText(this,"Usuario creado correctamente",Toast.LENGTH_LONG).show()
-                  intent= Intent(this,MainActivity::class.java)
+                  intent= Intent(this, MainActivity::class.java)
                     startActivity(intent)
                 } else if (userId > 0) {
                     UsuarioRepositorio.eliminar(userId)}

@@ -6,8 +6,6 @@ import android.os.Build
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import clases.Usuario
-import com.example.estacionamientotp.R
-import com.example.estacionamientotp.Registrarse_Activity
 
 import excepciones.ExisteUsuarioException
 import validarEspacios

@@ -1,4 +1,4 @@
-package com.example.estacionamientotp
+package com.example.estacionamientotp.ui
 
 import android.annotation.SuppressLint
 import android.os.Build
@@ -7,17 +7,20 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
+import com.example.estacionamientotp.R
 import com.example.estacionamientotp.databinding.ActivityAbonarTicketBinding
 import excepciones.SaldoInsuficienteException
 import repositorios.ClienteRepositorio
 import repositorios.TicketRepositorio
 
-class Abonar_Ticket_Activity : AppCompatActivity() {
+class AbonarTicketActivity : AppCompatActivity() {
     @SuppressLint("SuspiciousIndentation")
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding:ActivityAbonarTicketBinding=DataBindingUtil.setContentView(this,R.layout.activity_abonar_ticket)
+        val binding:ActivityAbonarTicketBinding=DataBindingUtil.setContentView(this,
+            R.layout.activity_abonar_ticket
+        )
  val bundle=intent.extras
         val numeroTicket=bundle?.getInt("codigoTicket")
         val idUser=bundle?.getLong("idUser")
@@ -36,6 +39,7 @@ class Abonar_Ticket_Activity : AppCompatActivity() {
 
 
     binding.imPagar.setOnClickListener {
+
             try { if(numeroTicket!=null&&idUser!=null){
          val ticket = TicketRepositorio.obtenerPorId(numeroTicket)
                 if (ClienteRepositorio.consultarSaldo(idUser) >= ticket.montoFinal&&ticket.pago==false) {

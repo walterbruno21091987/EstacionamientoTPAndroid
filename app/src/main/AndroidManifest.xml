@@ -13,35 +13,35 @@
         android:theme="@style/Theme.EstacionamientoTP"
         tools:targetApi="31">
         <activity
-            android:name=".Abonar_Ticket_Activity"
+            android:name=".ui.AbonarTicketActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".listaTicketActivity"
+            android:name=".ui.listaTicketActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Registrarse_Activity"
+            android:name=".ui.Registrarse_Activity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MenuUsuario_Activity"
+            android:name=".ui.MenuUsuario_Activity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

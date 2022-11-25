@@ -1,7 +1,6 @@
-package com.example.estacionamientotp
+package com.example.estacionamientotp.ui
 
 import android.content.Intent
-import android.opengl.Visibility
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,7 +10,7 @@ import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import clases.Cliente
 import clases.Ticket
-import clases.Usuario
+import com.example.estacionamientotp.R
 import com.example.estacionamientotp.databinding.ActivityMenuUsuarioBinding
 import excepciones.CodigoDeTicketExistenteException
 import repositorios.ClienteRepositorio
@@ -24,7 +23,9 @@ class MenuUsuario_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_usuario)
-        val binding:ActivityMenuUsuarioBinding=DataBindingUtil.setContentView(this,R.layout.activity_menu_usuario)
+        val binding:ActivityMenuUsuarioBinding=DataBindingUtil.setContentView(this,
+            R.layout.activity_menu_usuario
+        )
 
         val bundle=intent.extras
         val idUser=bundle?.getLong("usuario")
@@ -42,13 +43,14 @@ class MenuUsuario_Activity : AppCompatActivity() {
        iniciarAbonarTicketActivity(binding, idUser)
         }
         binding.btCargarSaldo.setOnClickListener {
+           binding.tvInformarSaldo.visibility=View.GONE
             cargarSaldo(binding, idUser)
         }
         binding.btSaldo.setOnClickListener {
             saldo(binding, idUser)
         }
         binding.cerrarSesion.setOnClickListener {
-            intent=Intent(this,MainActivity::class.java)
+            intent=Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
@@ -147,7 +149,7 @@ class MenuUsuario_Activity : AppCompatActivity() {
         } else binding.groupPagarTicket.visibility = View.GONE
         binding.btEnviarNumeroTicketAPagar.setOnClickListener {
             if (!binding.etIngreseTicket.text.isEmpty()) {
-                intent = Intent(this, Abonar_Ticket_Activity::class.java)
+                intent = Intent(this, AbonarTicketActivity::class.java)
                 val codTicket = binding.etIngreseTicket.text.toString().toInt()
                 intent.putExtra("codigoTicket", codTicket)
                 intent.putExtra("idUser", idUser)

@@ -195,6 +195,18 @@
                 app:layout_constraintTop_toBottomOf="@+id/titulo_numero_ticket"
                 app:layout_constraintVertical_bias="0.547" />
 
+            <Button
+                android:id="@+id/bt_pagar_ticket_lista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/abonar_ticket"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.951"
+                app:layout_constraintStart_toEndOf="@+id/monto_final"
+                app:layout_constraintTop_toBottomOf="@+id/estado"
+                app:layout_constraintVertical_bias="0.72" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
 </layout>
