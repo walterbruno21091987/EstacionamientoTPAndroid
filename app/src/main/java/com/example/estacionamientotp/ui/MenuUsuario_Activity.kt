@@ -40,7 +40,7 @@ class MenuUsuario_Activity : AppCompatActivity() {
             historialTicket(user)
         }
         binding.btPagoTicket.setOnClickListener {
-       iniciarAbonarTicketActivity(binding, idUser)
+       abonarTicketList(user)
         }
         binding.btCargarSaldo.setOnClickListener {
            binding.tvInformarSaldo.visibility=View.GONE
@@ -52,6 +52,16 @@ class MenuUsuario_Activity : AppCompatActivity() {
         binding.cerrarSesion.setOnClickListener {
             intent=Intent(this, MainActivity::class.java)
             startActivity(intent)
+        }
+    }
+
+    private fun abonarTicketList(user: Cliente?) {
+        intent = Intent(this, listaTicketActivity::class.java)
+        if (user != null) {
+            val patente = user.vehiculo.patenteVehiculo
+            intent.putExtra("patente", patente)
+            intent.putExtra("activity",1)
+             startActivity(intent)
         }
     }
 
@@ -75,6 +85,7 @@ class MenuUsuario_Activity : AppCompatActivity() {
         if (user != null) {
             val patente = user.vehiculo.patenteVehiculo
             intent.putExtra("patente", patente)
+            intent.putExtra("activity",0)
         }
 
         startActivity(intent)
@@ -140,22 +151,5 @@ class MenuUsuario_Activity : AppCompatActivity() {
         }
     }
 
-    private fun iniciarAbonarTicketActivity(
-        binding: ActivityMenuUsuarioBinding,
-        idUser: Long?
-    ) {
-        if (binding.groupPagarTicket.visibility == View.GONE) {
-            binding.groupPagarTicket.visibility = View.VISIBLE
-        } else binding.groupPagarTicket.visibility = View.GONE
-        binding.btEnviarNumeroTicketAPagar.setOnClickListener {
-            if (!binding.etIngreseTicket.text.isEmpty()) {
-                intent = Intent(this, AbonarTicketActivity::class.java)
-                val codTicket = binding.etIngreseTicket.text.toString().toInt()
-                intent.putExtra("codigoTicket", codTicket)
-                intent.putExtra("idUser", idUser)
-                startActivity(intent)
 
-            }
-        }
-    }
 }

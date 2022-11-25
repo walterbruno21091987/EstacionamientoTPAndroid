@@ -23,12 +23,16 @@ class listaTicketActivity : AppCompatActivity() {
 
         val recyclerView=findViewById<RecyclerView>(R.id.recyclerTickets)
         recyclerView.layoutManager=LinearLayoutManager(this)
-        val listTicket= mutableListOf<Ticket>()
+        var listTicket= mutableListOf<Ticket>()
         val bundle=intent.extras
         val licensePlate=bundle?.getString("patente")
-        if(licensePlate!=null){
-       for (i in TicketRepositorio.buscar(licensePlate)) listTicket.add(i)
-        recyclerView.adapter=MyAdapterTickets(this,listTicket)
-    }
+        val activity=bundle?.getInt("activity")
+        if(licensePlate!=null && activity!=null){
+            for (i in TicketRepositorio.buscar(licensePlate)) listTicket.add(i)
+            if(activity==1) {
+                listTicket= listTicket.filter { it.pago==false } as MutableList<Ticket>
+            }
+            recyclerView.adapter = MyAdapterTickets(this,activity, listTicket)
+        }
     }
 }

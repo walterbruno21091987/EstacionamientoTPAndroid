@@ -33,20 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <EditText
-        android:id="@+id/et_ingrese_ticket"
-        style="@style/ET_style"
-        android:layout_width="157dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:hint="@string/numero_ticket_ingreso"
-        app:layout_constraintBottom_toTopOf="@id/bt_consultar_historial"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.323"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bt_pago_ticket" />
 
     <Button
         android:id="@+id/bt_pago_ticket"
@@ -66,7 +53,7 @@
         android:text="@string/historial_tickets"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_ingrese_ticket" />
+        app:layout_constraintTop_toBottomOf="@+id/bt_pago_ticket" />
 
     <Button
         android:id="@+id/bt_saldo"
@@ -157,23 +144,8 @@
 
         android:text=">"/>
 
-    <Button
-        android:id="@+id/bt_enviar_numero_ticket_a_pagar"
-        android:layout_width="54dp"
-        android:layout_height="42dp"
-        android:text=">"
-        app:layout_constraintBottom_toTopOf="@id/bt_consultar_historial"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.212"
-        app:layout_constraintStart_toEndOf="@+id/et_ingrese_ticket"
-        app:layout_constraintTop_toBottomOf="@+id/bt_pago_ticket"
-        app:layout_constraintVertical_bias="0.256" />
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/group_pagar_ticket"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:constraint_referenced_ids="et_ingrese_ticket,bt_enviar_numero_ticket_a_pagar" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

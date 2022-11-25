@@ -17,7 +17,7 @@ import com.example.estacionamientotp.ui.listaTicketActivity
 import repositorios.ClienteRepositorio
 import repositorios.UsuarioRepositorio
 
-class MyAdapterTickets(val context:Context,val ticketList:List<Ticket>):RecyclerView.Adapter<TicketViewHolder>() {
+class MyAdapterTickets(val context:Context,val tipoActivity:Int,val ticketList:List<Ticket>):RecyclerView.Adapter<TicketViewHolder>() {
     @SuppressLint("SuspiciousIndentation")
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TicketViewHolder {
      val layoutInflater=LayoutInflater.from(parent.context)
@@ -27,6 +27,7 @@ class MyAdapterTickets(val context:Context,val ticketList:List<Ticket>):Recycler
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: TicketViewHolder, position: Int) {
         holder.render(ticketList[position])
+        if(tipoActivity==0)holder.pagar.visibility=View.GONE
         holder.pagar.setOnClickListener {
        val codTicket=ticketList[position].codigo
        val idUser=ClienteRepositorio.obtenerPorPatente(ticketList[position].vehiculoPatente).id
