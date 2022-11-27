@@ -1,4 +1,4 @@
-package adapter
+package com.example.estacionamientotp.adapter
 
 import android.os.Build
 import android.view.View
@@ -6,10 +6,9 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import clases.Ticket
+import com.example.estacionamientotp.clases.Ticket
 import com.example.estacionamientotp.R
-import repositorios.ClienteRepositorio
-import repositorios.UsuarioRepositorio
+import com.example.estacionamientotp.repositorios.ClienteRepositorio
 
 class TicketViewHolder(view: View):ViewHolder(view) {
     val nroTicket = view.findViewById<TextView>(R.id.numero_ticket)
@@ -23,7 +22,7 @@ class TicketViewHolder(view: View):ViewHolder(view) {
     val pagar=view.findViewById<Button>(R.id.bt_pagar_ticket_lista)
     @RequiresApi(Build.VERSION_CODES.O)
     fun render(ticket: Ticket) {
-        val user=ClienteRepositorio.obtenerPorPatente(ticket.vehiculoPatente)
+        val user= ClienteRepositorio.obtenerPorPatente(ticket.vehiculoPatente)
         nroTicket.text = ticket.codigo.toString()
         patente.text=ticket.vehiculoPatente
         montoBruto.text=ticket.calcularMontoBruto().toString()

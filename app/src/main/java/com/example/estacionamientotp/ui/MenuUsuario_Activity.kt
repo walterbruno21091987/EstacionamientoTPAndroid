@@ -8,13 +8,13 @@ import android.view.View
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
-import clases.Cliente
-import clases.Ticket
+import com.example.estacionamientotp.clases.Cliente
+import com.example.estacionamientotp.clases.Ticket
 import com.example.estacionamientotp.R
 import com.example.estacionamientotp.databinding.ActivityMenuUsuarioBinding
-import excepciones.CodigoDeTicketExistenteException
-import repositorios.ClienteRepositorio
-import repositorios.TicketRepositorio
+import com.example.estacionamientotp.excepciones.CodigoDeTicketExistenteException
+import com.example.estacionamientotp.repositorios.ClienteRepositorio
+import com.example.estacionamientotp.repositorios.TicketRepositorio
 import java.time.LocalDate
 import java.time.LocalTime
 
@@ -31,7 +31,7 @@ class MenuUsuario_Activity : AppCompatActivity() {
         val idUser=bundle?.getLong("usuario")
        var user: Cliente?=null
         if(idUser!=null){
-     user=ClienteRepositorio.obtenerPorId(idUser)
+     user= ClienteRepositorio.obtenerPorId(idUser)
         }
         binding.btGenerarTicket.setOnClickListener {
             generarTicket(user)

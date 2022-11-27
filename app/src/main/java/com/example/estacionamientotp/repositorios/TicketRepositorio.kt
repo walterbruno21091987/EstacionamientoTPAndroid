@@ -1,11 +1,11 @@
-package repositorios
+package com.example.estacionamientotp.repositorios
 
 import android.annotation.SuppressLint
 import android.os.Build
 import androidx.annotation.RequiresApi
-import clases.Ticket
-import excepciones.CodigoDeTicketExistenteException
-import excepciones.NoExisteTicketExeption
+import com.example.estacionamientotp.clases.Ticket
+import com.example.estacionamientotp.excepciones.CodigoDeTicketExistenteException
+import com.example.estacionamientotp.excepciones.NoExisteTicketExeption
 import java.time.LocalDate
 import java.time.LocalTime
 
@@ -32,7 +32,7 @@ object TicketRepositorio {
     fun agregar(ticket: Ticket):Boolean  {
     var agregado=false
 
-         if (tickets.none { it.codigo == ticket.codigo })  agregado=tickets.add(ticket)
+         if (tickets.none { it.codigo == ticket.codigo })  agregado= tickets.add(ticket)
          else throw CodigoDeTicketExistenteException("Codigo existente")
 
         return agregado

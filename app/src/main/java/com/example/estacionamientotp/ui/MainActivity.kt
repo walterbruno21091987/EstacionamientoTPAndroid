@@ -9,7 +9,7 @@ import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import com.example.estacionamientotp.R
 import com.example.estacionamientotp.databinding.ActivityMainBinding
-import repositorios.UsuarioRepositorio
+import com.example.estacionamientotp.repositorios.UsuarioRepositorio
 
 class MainActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.O)

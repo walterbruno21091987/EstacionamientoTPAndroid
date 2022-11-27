@@ -9,9 +9,9 @@ import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import com.example.estacionamientotp.R
 import com.example.estacionamientotp.databinding.ActivityAbonarTicketBinding
-import excepciones.SaldoInsuficienteException
-import repositorios.ClienteRepositorio
-import repositorios.TicketRepositorio
+import com.example.estacionamientotp.excepciones.SaldoInsuficienteException
+import com.example.estacionamientotp.repositorios.ClienteRepositorio
+import com.example.estacionamientotp.repositorios.TicketRepositorio
 
 class AbonarTicketActivity : AppCompatActivity() {
     @SuppressLint("SuspiciousIndentation")

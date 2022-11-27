@@ -1,12 +1,12 @@
-package repositorios
+package com.example.estacionamientotp.repositorios
 
-import clases.Automovil
+import com.example.estacionamientotp.clases.Automovil
 import android.os.Build
 import androidx.annotation.RequiresApi
 
-import clases.Cliente
+import com.example.estacionamientotp.clases.Cliente
 
-import excepciones.NoExisteIdDeClienteException
+import com.example.estacionamientotp.excepciones.NoExisteIdDeClienteException
 import esPositivo
 import validarLargo
 import java.time.LocalDate

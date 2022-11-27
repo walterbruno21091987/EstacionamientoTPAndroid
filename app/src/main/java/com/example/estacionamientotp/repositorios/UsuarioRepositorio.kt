@@ -1,13 +1,13 @@
-package repositorios
+package com.example.estacionamientotp.repositorios
 
 import android.content.Context
-import clases.VehiculoPesado
+import com.example.estacionamientotp.clases.VehiculoPesado
 import android.os.Build
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import clases.Usuario
+import com.example.estacionamientotp.clases.Usuario
 
-import excepciones.ExisteUsuarioException
+import com.example.estacionamientotp.excepciones.ExisteUsuarioException
 import validarEspacios
 import validarLargo
 import java.time.LocalDate
