@@ -1,6 +1,7 @@
 package com.example.estacionamientotp.ui
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -52,6 +53,11 @@ class AbonarTicketActivity : AppCompatActivity() {
      }
 
  }
+        binding.volverMenuUsuario.setOnClickListener {
+            intent=Intent(this,MenuUsuario_Activity::class.java)
+            intent.putExtra("usuario",idUser)
+            startActivity(intent)
+        }
 
     }
 }
